@@ -6,11 +6,11 @@ ui <- page_sidebar(
     title = "Configuration",
     textInput("model_name", "Enter LLM Model to use:"),
     textInput("openai_api_key", "Enter OpenAI API Key"),
-    input_task_button("confirm_settings", label = "Update")
+    input_task_button("confirm_settings", label = "Update"),
+    verbatimTextOutput("status")
   ),
   card(
     card_header("The chat's response"),
-    verbatimTextOutput("status"),
     uiOutput("chat_response"),
     textInput("user_query", "Enter query:"),
     input_task_button("ask_chat", label = "Ask the chat")
